@@ -25,7 +25,7 @@ describe('Создание пользователя', () => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      userName: 'Olga1_64646464644' , 
+      userName: 'Olga1_64646464640004' , 
       password: 'P@ssw0rd123!',       
     }),
   });
