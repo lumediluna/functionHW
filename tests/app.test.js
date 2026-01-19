@@ -12,11 +12,13 @@ describe ('Проверка имени пользователя', () => {
      });
    });
 });
+
     test('Имя короче 2 букв — невалидно',  async () => {
         const name = 's';
         const result = await nameIsValid(name);
     expect (result).toBe(false);
     });
+
     test('Имя - цифрами - невалидно', async () => {
       const name = '77';
       const result = await nameIsValid(name);
