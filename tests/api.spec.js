@@ -30,6 +30,11 @@ test('Успешное создание пользователя', async ({ requ
   expect(body.userID).toBeDefined();
 });
 
+
+
+
+
+
 test('Неуспешное создание пользователя — пароль не подходит', async ({ request }) => {
   const response = await request.post(`${baseURL}/Account/v1/User`, {
     data: {

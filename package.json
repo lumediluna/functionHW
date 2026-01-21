@@ -23,5 +23,17 @@
   },
   "dependencies": {
     "axios": "^1.13.2"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "browser": true
+    },
+    "plugins": [
+      "playwright"
+    ],
+    "extends": [
+      "plugin:playwright/recommended"
+    ]
   }
 }
