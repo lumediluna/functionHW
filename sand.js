@@ -2,19 +2,18 @@
 //     name: "Olga",
 //     age: 37,
 //     "two words": true,
-// }; 
+// };
 // console.log(user);
-    
+
 //  user.isAdmin =false; // true/false
 
 // console.log(user)
 
-
 // let fruits =[
-//     "apple", 
-//     "pear", 
-//     "orange", 
-//     {name:"Olga"}, 
+//     "apple",
+//     "pear",
+//     "orange",
+//     {name:"Olga"},
 //  //   function() {return "Hello"},
 // ]
 //fruits[5]= "banana"
@@ -41,7 +40,7 @@
 // for (let fruit of fruits) {
 //     console.log(fruit);
 // }
-// fruits[1000] = "broccoli"; 
+// fruits[1000] = "broccoli";
 // fruits.length = 1500;
 // fruits.length= 1;
 // console.log(fruits.length);
@@ -64,5 +63,3 @@
 //     {name: "bob", age:3},
 // ]
 // console.log(users[0], age)
-
-
