@@ -1,22 +1,24 @@
 import js from '@eslint/js';
 import playwright from 'eslint-plugin-playwright';
+import globals from 'globals';
 
 export default [
   js.configs.recommended,
 
+  // Общие globals
   {
-    files: ['**/*.js'],
     languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'module',
-    },
-    rules: {
-      'no-unused-vars': 'warn',
+      globals: {
+        ...globals.node,
+        ...globals.browser,
+        ...globals.jest, 
+      },
     },
   },
 
+  // Playwright
   {
-    files: ['**/*.spec.js', '**/*.test.js'],
+    files: ['**/*.spec.js'],
     plugins: {
       playwright,
     },
