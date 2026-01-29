@@ -3,10 +3,11 @@ import { test, expect } from '@playwright/test';
 import { nameIsValid } from '../src/app.js';
 import { fullTrim } from '../src/app.js';
 import { getTotal } from '../src/app.js';
+import { getScore } from '../src/app.js';
 
 
-test.describe('Проверка имени пользователя', () => {
-  test.describe('nameIsValid', () => {
+// test.describe('Проверка имени пользователя', () => {
+//   test.describe('nameIsValid', () => {
 
     test('Имя должно состоять из букв', async () => {
       const name = 'bob';
@@ -14,8 +15,8 @@ test.describe('Проверка имени пользователя', () => {
       expect(result).toBe(true);
     });
 
-  });
-});
+//   });
+// });
 
 test('Имя короче 2 букв — невалидно', async () => {
   const name = 's';
@@ -30,8 +31,8 @@ test('Имя - цифрами - невалидно', async () => {
 });
 
 
-test.describe('Удаление пробелов из строки', () => {
-  test.describe('fullTrim', () => {
+// test.describe('Удаление пробелов из строки', () => {
+//   test.describe('fullTrim', () => {
 
     test('Удаление пробелов из строки', async () => {
       const text = ' f    g   jjj';
@@ -40,8 +41,8 @@ test.describe('Удаление пробелов из строки', () => {
       expect(result).toBe(expected);
     });
 
-  });
-});
+//   });
+// });
 
 test('Удаление переноса', async () => {
   const text = '\n';
@@ -58,9 +59,9 @@ test('Пустая строка при text=null', async () => {
 });
 
 
-test.describe('возможные ошибки в скидке getTotal', () => {
+// test.describe('возможные ошибки в скидке getTotal', () => {
 
-  test.describe('getTotal %', () => {
+//   test.describe('getTotal %', () => {
 
     const testCases = [
       ['скидка не число', [{ price: 10, quantity: 1 }], 'оо', 'Скидка должна быть числом'],
@@ -75,6 +76,20 @@ test.describe('возможные ошибки в скидке getTotal', () => 
       });
     }
 
-  });
+//   });
 
+// });
+
+
+
+test('getScore возвращает сумму всех баллов', () => {
+  const scores = {
+    Anna: 10,
+    Olga: 1,
+    Ivan: 5,
+  };
+
+  const result = getScore(scores);
+
+  expect(result).toBe(16);
 });
