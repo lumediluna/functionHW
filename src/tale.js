@@ -15,28 +15,28 @@
 //   else
 //   return 'А я то тут причем?';
 // }
-// console.log(kolobok('дедушка')); 
-// console.log(kolobok('заяц'));    
-// console.log(kolobok('лиса'));    
+// console.log(kolobok('дедушка'));
+// console.log(kolobok('заяц'));
+// console.log(kolobok('лиса'));
 // console.log(kolobok('кошка'));
 
 //с swith
 function kolobok(name) {
   switch (name) {
     case 'дедушка':
-      return 'Я от дедушки ушёл';
+      return 'Я от дедушки ушёл'
     case 'заяц':
-      return 'Я от зайца ушёл';
+      return 'Я от зайца ушёл'
     case 'лиса':
-      return 'Меня съели';
+      return 'Меня съели'
     default:
-      return 'И причем тут я?';
+      return 'И причем тут я?'
   }
 }
 
-console.log(kolobok('дедушка')); 
-console.log(kolobok('заяц'));    
-console.log(kolobok('лиса'));    
+console.log(kolobok('дедушка'))
+console.log(kolobok('заяц'))
+console.log(kolobok('лиса'))
 console.log(kolobok('мышка'))
 
 // Без шаблонных строк
@@ -52,14 +52,14 @@ console.log(kolobok('мышка'))
 // console.log(newYear('Дед Мороз'))
 
 //с шаблонными строками
-function newYear (name) {
-    switch (name) {
-        case 'Дед Мороз':
-            return `${name}! ${name}! ${name}!`;
-        
-        case 'Снегурочка':
-            return `${name}! ${name}! ${name}!`;
-    }
+function newYear(name) {
+  switch (name) {
+    case 'Дед Мороз':
+      return `${name}! ${name}! ${name}!`
+
+    case 'Снегурочка':
+      return `${name}! ${name}! ${name}!`
+  }
 }
-console.log(newYear('Снегурочка'));
-console.log(newYear('Дед Мороз'));
+console.log(newYear('Снегурочка'))
+console.log(newYear('Дед Мороз'))
