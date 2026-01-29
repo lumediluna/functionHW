@@ -4,13 +4,17 @@
     "test": "npx playwright test",
     "start": "node src/main.js",
     "lint:ci": "eslint .",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "allure": "allure serve reports/allure-results",
+    "allure:ci": "allure generate reports/allure-results --clean --report-dir reports/allure-report",
+    "allure:ci:show": "allure open reports/allure-report"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
     "@faker-js/faker": "^10.2.0",
     "@playwright/test": "^1.57.0",
     "allure-commandline": "^2.36.0",
+    "allure-playwright": "^3.4.5",
     "dotenv": "^16.4.7",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
