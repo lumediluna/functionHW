@@ -4,5 +4,9 @@ export default defineConfig({
   testDir: './tests',
   use: {
     baseURL: 'http://localhost:3000'
-  }
-})
+  },
+  reporter: [
+    ['list'],
+    ['allure-playwright', { outputFolder: 'allure-results' }],
+  ],
+});
