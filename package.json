@@ -7,7 +7,8 @@
     "lint": "eslint . --fix",
     "allure": "allure serve reports/allure-results",
     "allure:ci": "allure generate reports/allure-results --clean --report-dir reports/allure-report",
-    "allure:ci:show": "allure open reports/allure-report"
+    "allure:ci:show": "allure open reports/allure-report",
+    "type-check": "tsc --noEmit"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
@@ -23,7 +24,10 @@
     "globals": "^15.14.0",
     "npm-run-all2": "^7.0.2",
     "prettier": "^3.4.2",
-    "supertest": "^7.2.2"
+    "supertest": "^7.2.2",
+    "ts-migrate": "^0.1.35",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.54.0"
   },
   "dependencies": {
     "axios": "^1.13.2"
