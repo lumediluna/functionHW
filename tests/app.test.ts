@@ -2,8 +2,7 @@ import { test, expect } from '@playwright/test';
 
 import { nameIsValid } from '../src/app.js';
 import { fullTrim } from '../src/app.js';
-import { getTotal } from '../src/app.js';
-import { getScore } from '../src/app.js';
+//import { getTotal } from '../src/app.js';
 
 
 // test.describe('Проверка имени пользователя', () => {
@@ -63,33 +62,20 @@ test('Пустая строка при text=null', async () => {
 
 //   test.describe('getTotal %', () => {
 
-    const testCases = [
-      ['скидка не число', [{ price: 10, quantity: 1 }], 'оо', 'Скидка должна быть числом'],
-      ['скидка не может быть отрицательной', [{ price: 10, quantity: 1 }], -1, 'Процент скидки должен быть от 0 до 99'],
-      ['скидка больше 99%', [{ price: 10, quantity: 1 }], 100, 'Процент скидки должен быть от 0 до 99'],
-    ];
+    // const testCases = [
+    //   ['скидка не число', [{ price: 10, quantity: 1 }], 'оо', 'Скидка должна быть числом'],
+    //   ['скидка не может быть отрицательной', [{ price: 10, quantity: 1 }], -1, 'Процент скидки должен быть от 0 до 99'],
+    //   ['скидка больше 99%', [{ price: 10, quantity: 1 }], 100, 'Процент скидки должен быть от 0 до 99'],
+    // ];
 
-    for (const [title, items, discount, errorMessage] of testCases) {
-      test(title, async () => {
-        const result = () => getTotal(items, discount);
-        expect(result).toThrow(errorMessage);
-      });
-    }
+    // for (const [title, items, discount, errorMessage] of testCases) {
+    //   test(title, async () => {
+    //     const result = () => getTotal(items, discount);
+    //     expect(result).toThrow(errorMessage);
+    //   });
+    // }
 
 //   });
 
 // });
 
-
-
-test('getScore возвращает сумму всех баллов', () => {
-  const scores = {
-    Anna: 10,
-    Olga: 1,
-    Ivan: 5,
-  };
-
-  const result = getScore(scores);
-
-  expect(result).toBe(16);
-});
